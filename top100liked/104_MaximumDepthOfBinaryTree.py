@@ -42,3 +42,10 @@ class Solution:
             level = queue
             
         return depth
+
+class Solution2:
+    def maxDepth(self, root: TreeNode) -> int:
+        if not root:
+            return 0
+
+        return 1 + max(self.maxDepth(root.left), self.maxDepth(root.right))
